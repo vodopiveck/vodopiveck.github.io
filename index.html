@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nike Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <img src="images/bg.png" id="bgimg">
+
+    <div id="content">
+
+    <div class="navbar">
+      <img src="images/nikeLogo.png">
+      <nav>
+        <ul>
+          <li><a href="#">SHOP</a></li>
+          <li><a href="#">CUSTOM SHOES</a></li>
+          <li><a href="#">ABOUT US</a></li>
+          <li><a href="#">CART</a></li>
+        </ul>
+      </nav>
+    </div>
+
+        <div class="product">
+          <div><img src="images/shoe.png" id="shoeImg"></div>
+          <div><img src="images/swoosh.png" id="swooshImg"></div>
+          <div id="swooshSvg"><svg width="200px" height="auto" viewBox="0 0 838 298">
+         <path fill="red" stroke="black" stroke-width="1"
+               d="M 118.50,3.88
+                  C 60.70,66.07 52.12,81.38 41.62,97.00
+                    28.33,110.60 9.89,156.67 11.00,156.25M 11.00,156.26
+                  C 2.27,170.30 -8.27,231.82 14.00,259.33
+                    37.79,291.31 70.25,294.83 76.00,295.62
+                    104.00,304.00 171.36,287.27 173.50,284.75
+                    185.45,287.91 830.79,6.50 831.96,6.91
+                    831.96,6.91 291.00,150.00 291.00,150.00
+                    279.00,152.67 176.50,192.50 121.88,162.50
+                    113.21,153.58 85.98,141.26 89.04,87.07
+                    89.04,81.07 107.69,10.58 118.52,3.91" />
+       </svg>
+      </div>
+      <canvas id="swooshBezierCurveTo" id="myCanvas" width="200" height="100" style="border:1px solid #00ff00;"></canvas>
+        </div>
+      
+    <div id="productDescription">
+	<h1>NIKE SHOES</h1>
+	<p id="productDescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      Voluptas ex quisquam officia quod iste odio repudiandae repellendus molestiae,
+      adipisci soluta et placeat inventore consectetur eum assumenda laborum libero dolorum totam.
+	 </p>
+    </div>
+
+    <div id="buttonDiv">
+      <button class="changeButton" type="button" onclick="changeD()">CHANGE TO DEFAULT</button>
+      <button class="changeButton" type="button" onclick="changeS()">CHANGE TO SVG</button>
+      <button class="changeButton" type="button" onclick="changeI()">CHANGE TO IMG</button>
+      <button class="changeButton" type="button" onclick="changeB()">CHANGE TO BEZIER</button>
+    </div>
+	  
+
+</div>
+  </body>
+  <script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+function drawShape(ctx, xoff, yoff){
+  ctx.beginPath();
+  ctx.moveTo(29 + xoff, 76 + yoff);
+  ctx.bezierCurveTo(16 + xoff, 96 + yoff, 4 + xoff, 102 + yoff, 0 + xoff, 131 + yoff);
+  ctx.bezierCurveTo(1 + xoff, 149 + yoff, 22 + xoff, 155 + yoff, 30 + xoff, 152 + yoff);
+  ctx.bezierCurveTo(31 + xoff, 153 + yoff, 62 + xoff, 144 + yoff, 62 + xoff, 144 + yoff);
+  ctx.bezierCurveTo(69 + xoff, 141 + yoff, 142 + xoff, 109 + yoff, 128 + xoff, 115 + yoff);
+  ctx.bezierCurveTo(115 + xoff, 122 + yoff, 223 + xoff, 74 + yoff, 223 + xoff, 74 + yoff);
+  ctx.bezierCurveTo(207 + xoff, 72 + yoff, 60 + xoff, 123 + yoff, 45 + xoff, 119 + yoff);
+  ctx.bezierCurveTo(32 + xoff, 124 + yoff, 14 + xoff, 99 + yoff, 29 + xoff, 76 + yoff);
+  ctx.stroke();
+}
+function onclickD(){
+  document.getElementById("shoeIMG").style.display = "";
+}
+function onclickS(){
+  document.getElementById("swooshSvg").style.display = "";
+}
+function onclickI(){
+  document.getElementById("swooshImg").style.display = "";
+}
+function onclickB(){
+  document.getElementById("swooshBezierCurveTo").style.display = "";
+}
+  </script>
+</html>
