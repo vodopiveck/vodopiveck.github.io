@@ -121,17 +121,16 @@ body {
     left: 82.8%;
     z-index: 2;
     transform: rotate(-10.2deg);
-    display: block;
+    display: none;
 }
 
 #swooshSvg {
     position: absolute;
     z-index: 2;
     margin-right: 20px;
-    left: 77.5%;
-    top: 21.2%;
+    left: 82.85%;
+    top: 20.5%;
     transform: rotate(-10.2deg);
-    display: none;
 }
 
 #swooshBezierCurveTo {
