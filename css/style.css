@@ -117,8 +117,8 @@ body {
     margin-top: 40px;
     height: 74px;
     width: auto;
-    top: 15%;
-    left: 82.8%;
+    top: 18%;
+    left: 81.2%;
     z-index: 2;
     transform: rotate(-10.2deg);
     display: none;
@@ -128,15 +128,15 @@ body {
     position: absolute;
     z-index: 2;
     margin-right: 20px;
-    left: 82.85%;
-    top: 20.5%;
-    transform: rotate(-10.2deg);
-}
-
-#swooshBezierCurveTo {
+    left: 81.2%;
+    top: 24%;
+    transform: rotate(-10deg);
     display: none;
 }
-
+#swooshBezierCurveTo{
+    width: 400;
+    height: 200;
+}
 #buttonDiv {
     height: 180px;
     width: 200px;
