@@ -1,158 +1,76 @@
 body {
     margin: 0 auto;
 }
-
-#bgimg {
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    position: fixed;
-}
-
-#content {
-    z-index: 0;
-}
-
 .navbar {
     height: 40px;
+    background-color: black;
+   
 }
-
 .navbar img {
     height: 40px;
     float: left;
 }
-
 .navbar nav {
     height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .navbar nav ul {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
 }
-
 .navbar nav ul li {
     padding-left: 20px;
 }
-
 .navbar nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
-
-@media (max-width: 600px) {
-    .navbar nav ul {
-        flex-direction: column;
-    }
-    .navbar nav ul li {
-        margin: 10px 0;
-    }
+#n1{
+height:500px;
+display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-::-webkit-scrollbar {
-    width: 2px;
-    margin-right: 10px;
+#productDescription{
+width: 500px;
+height: auto;
+text-align: left;
+display: inline-block;
+  margin: 0 auto;
 }
-
- ::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0);
+#productDescription h1{
+font-size: 35px;
+font-weight: bold;
+color:black;
+text-align: center;
+} 
+#productDescription p{
+    font-size: 20px;
 }
-
- ::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0);
-}
-
-.product {
-    height: 500px;
-    width: auto;
-    float: right;
-    background-color: white;
-    border-radius: 50%;
-    background-color: #f7f7f7;
-    z-index: 1;
-}
-
-#productDescription {
-    height: 50%;
-    width: 400px;
-    z-index: 1;
-    padding-top: 15%;
-    font-size: 24px;
-    padding: auto;
-    text-align: center;
-    text-align: center;
-    padding: 10%;
-    color: white;
-}
-
-#selectFormat {
-    position: relative;
-    border-radius: 10px;
-    width: 200px;
-    height: 100px;
-    margin: auto;
+#n2{
+height: 500px;
     display: flex;
-    z-index: 1;
-    height: 50%;
-    background-color: #44b1f4;
-    float: right;
-    margin-right: 150px;
+    align-items: center;
+    justify-content: center;
 }
-
-#shoeImg {
-    position: relative;
-    width: 100%;
-    z-index: 1;
-    transform: rotate(30deg);
+.changingDiv img{
+    width: 400px;
+    height: 400px;
+    margin-right: 50px;
+    border-bottom: 1px solid black;
 }
-
-#swooshImg {
-    position: absolute;
-    margin-top: 40px;
-    height: 74px;
-    width: auto;
-    top: 18%;
-    left: 81.2%;
-    z-index: 2;
-    transform: rotate(-10.2deg);
-    display: none;
+#productBuy{
+    height: 400px;
+    padding-top: 200px;
 }
-
-#swooshSvg {
-    position: absolute;
-    z-index: 2;
-    margin-right: 20px;
-    left: 81.2%;
-    top: 24%;
-    transform: rotate(-10deg);
-    display: none;
-}
-#swooshBezierCurveTo{
-    width: 400;
-    height: 200;
-}
-#buttonDiv {
-    height: 180px;
-    width: 200px;
-    z-index: 1;
-    float: right;
-    margin-right: 150px;
-    margin-bottom: 100px;
-    margin-top: -225px;
-}
-
-.changeButton {
-    height: 80px;
-    width: 250px;
-    background-color: #46b6f4;
-    z-index: 1;
-    border-radius: 30px;
-    border-color: #46b6f4;
-    color: white;
+#cD1{display: block;}
+#cD2{display: none;}
+#cD3{display: none;}
+#myCanvas{
+    border: 1px solid black;
 }
