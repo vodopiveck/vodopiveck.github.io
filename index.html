@@ -8,22 +8,17 @@
 </head>
 
 <body>
-    <img src="images/bg.png" id="bgimg">
-
-    <div id="content">
-
         <div class="navbar">
             <img src="images/nikeLogo.png">
             <nav>
                 <ul>
-                    <li><a href="#">SHOP</a></li>
-                    <li><a href="#">CUSTOM SHOES</a></li>
+                    <li><a href="#">Witness VII</a></li>
+                    <li><a href="#">BUY</a></li>
                     <li><a href="#">ABOUT US</a></li>
-                    <li><a href="#">CART</a></li>
                 </ul>
             </nav>
         </div>
-
+        <!--
         <div class="product">
             <div><img src="images/shoes.png" id="shoeImg"></div>
             <div><img src="images/swoosh.png" id="swooshImg"></div>
@@ -45,40 +40,83 @@
             </div>
             <div id="swooshBezierCurveTo"><canvas id="canvas"></canvas> </div>
         </div>
-
-        <div id="productDescription">
-            <h1>NIKE SHOES</h1>
-            <p id="productDescription">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                Voluptas ex quisquam officia quod iste odio repudiandae repellendus molestiae, 
-                adipisci soluta et placeat inventore consectetur eum assumenda laborum libero dolorum totam.
-            </p>
-        </div>
-
+-->
+<div id="n1">
+    <div id="productDescription">
+        <h1>Witness VII</h1>
+        <p>The longer LeBron’s legendary career continues, 
+            the more his game needs a design that doesn’t weigh him down, 
+            yet can still control all that sublime power. 
+            So, we’ve created our lightest LeBron model but with the kind of bankable 
+            support that can help you stay in front of your opponent with the game on the line. 
+            Full-length Max Air cushioning helps you take off and land confidently, 
+            while lightweight mesh blends with containment cables to help keep you locked in for 4 quarters or more.</p>
     </div>
+</div>
+<div id="n2">
+    <div>
+        <div class="changingDiv" id="cD1">
+            <img src="images/w71.png">
+            <canvas id="myCanvas" width="400px" height="400px"></canvas>
+        </div>
+        <div class="changingDiv" id="cD2">
+            <img src="images/w73.png">
+        </div>
+        <div class="changingDiv" id="cD3">
+            <img src="images/w76.png">
+        </div>
+    </div>
+    <div id="productBuy">
+        <p>LeBron Witness WII</p>
+        <p>Basketball Shoes</p>
+        <p>$105</p>
+        <select name="shoe-size">
+            <option value="6">6</option>
+            <option value="6.5">6.5</option>
+            <option value="7">7</option>
+            <option value="7.5">7.5</option>
+            <option value="8">8</option>
+            <option value="8.5">8.5</option>
+            <option value="9">9</option>
+            <option value="9.5">9.5</option>
+            <option value="10">10</option>
+            <option value="10.5">10.5</option>
+            <option value="11">11</option>
+            <option value="11.5">11.5</option>
+            <option value="12">12</option>
+            <option value="12.5">12.5</option>
+            <option value="13">13</option>
+            <option value="13.5">13.5</option>
+            <option value="14">14</option>
+            <option value="14.5">14.5</option>
+            <option value="15">15</option>
+          </select>
+          <button style="background-color: black; color: white; padding: 10px 20px;">Add to Bag</button>
+    </div>
+</div>
+<div id="n3"></div>
 </body>
 <script>
-    /*
-    var canvas=document.getElementById("canvas");
-    var ctx=canvas.getContext('2d');
-    ctx.beginPath();
-    ctx.moveTo(10,100);
-    ctx.bezierCurveTo(50, 10, 150, 190, 190, 100);
-    ctx.stroke();
-    */
-    var counter=1;
-    setInterval(function(){
-        var div1=document.getElementById("swooshImg");
-        var div2=document.getElementById("swooshSvg");
-        if(counter===1){
-            div1.style.display="block";
-            div2.style.display="none";
-            counter++;
-        }else{
-            div1.style.display="none";
-            div2.style.display="block";
-            counter=1;
-        }
-    }, 5000);
+let currentDiv = 1;
+function showDiv() {
+  for (let i = 1; i <= 3; i++) {
+    const div = document.getElementById(`cD${i}`);
+    if (i === currentDiv) {
+      div.style.display = "block";
+    } else {
+      div.style.display = "none";
+    }
+  }
+  currentDiv = currentDiv % 3 + 1;
+}
+setInterval(showDiv, 3000);
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+  ctx.beginPath();
+  ctx.moveTo(127, 110);
+  ctx.bezierCurveTo(119, 148, 160, 92, 156, 93);
+  ctx.bezierCurveTo(153, 94, 132, 125, 127, 109);
+  ctx.stroke();
 </script>
 </html>
