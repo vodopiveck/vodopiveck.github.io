@@ -8,24 +8,37 @@
 </head>
 
 <body>
-        <div class="navbar">
-            <img src="images/nikeLogo.png">
-            <nav>
-                <ul>
-                    <li><a href="#">Witness VII</a></li>
-                    <li><a href="#">BUY</a></li>
-                    <li><a href="#">ABOUT US</a></li>
-                </ul>
-            </nav>
+    <div class="navbar">
+        <img src="images/nikeLogo.png">
+        <nav>
+            <ul>
+                <li><a href="#">Witness VII</a></li>
+                <li><a href="#">BUY</a></li>
+                <li><a href="#">ABOUT US</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="n1">
+        <div id="productDescription">
+            <h1>Witness VII</h1>
+            <p>The longer LeBron’s legendary career continues, the more his game needs a design that doesn’t weigh him down, yet can still control all that sublime power. So, we’ve created our lightest LeBron model but with the kind of bankable support that
+                can help you stay in front of your opponent with the game on the line. Full-length Max Air cushioning helps you take off and land confidently, while lightweight mesh blends with containment cables to help keep you locked in for 4 quarters
+                or more.</p>
         </div>
-        <!--
-        <div class="product">
-            <div><img src="images/shoes.png" id="shoeImg"></div>
-            <div><img src="images/swoosh.png" id="swooshImg"></div>
-            <div id="swooshSvg">
-                <svg width="200px" height="auto" viewBox="0 0 838 298">
-                    <path fill="red" stroke="black" stroke-width="1"
-                     d="M 118.50,3.88
+    </div>
+
+    <div id="n2">
+        <div>
+            <div class="changingDiv" id="cD1">
+                <img src="images/w71.png">
+                <canvas id="myCanvas"></canvas>
+            </div>
+            <div class="changingDiv" id="cD2">
+                <img src="images/w73.png">
+                <div id="svg">
+                    <svg height=40px width=auto viewBox="0 0 838 298">
+                        <path fill="black" stroke="black" stroke-width="1" d="M 118.50,3.88
                         C 60.70,66.07 52.12,81.38 41.62,97.00
                         28.33,110.60 9.89,156.67 11.00,156.25M 11.00,156.26
                         C 2.27,170.30 -8.27,231.82 14.00,259.33
@@ -36,41 +49,19 @@
                         279.00,152.67 176.50,192.50 121.88,162.50
                         113.21,153.58 85.98,141.26 89.04,87.07
                         89.04,81.07 107.69,10.58 118.52,3.91" />
-                </svg>
+                        </svg>
+                </div>
             </div>
-            <div id="swooshBezierCurveTo"><canvas id="canvas"></canvas> </div>
+            <div class="changingDiv" id="cD3">
+                <img src="images/w76.png">
+            </div>
         </div>
--->
-<div id="n1">
-    <div id="productDescription">
-        <h1>Witness VII</h1>
-        <p>The longer LeBron’s legendary career continues, 
-            the more his game needs a design that doesn’t weigh him down, 
-            yet can still control all that sublime power. 
-            So, we’ve created our lightest LeBron model but with the kind of bankable 
-            support that can help you stay in front of your opponent with the game on the line. 
-            Full-length Max Air cushioning helps you take off and land confidently, 
-            while lightweight mesh blends with containment cables to help keep you locked in for 4 quarters or more.</p>
-    </div>
-</div>
-<div id="n2">
-    <div>
-        <div class="changingDiv" id="cD1">
-            <img src="images/w71.png">
-            <canvas id="myCanvas" width="400px" height="400px"></canvas>
-        </div>
-        <div class="changingDiv" id="cD2">
-            <img src="images/w73.png">
-        </div>
-        <div class="changingDiv" id="cD3">
-            <img src="images/w76.png">
-        </div>
-    </div>
-    <div id="productBuy">
-        <p>LeBron Witness WII</p>
-        <p>Basketball Shoes</p>
-        <p>$105</p>
-        <select name="shoe-size">
+        <div id="productBuy">
+            <p>LeBron Witness WII</p>
+            <p>Basketball Shoes</p>
+            <p id="textChange">Bezier</p>
+            <p>$105</p>
+            <select name="shoe-size">
             <option value="6">6</option>
             <option value="6.5">6.5</option>
             <option value="7">7</option>
@@ -91,32 +82,50 @@
             <option value="14.5">14.5</option>
             <option value="15">15</option>
           </select>
-          <button style="background-color: black; color: white; padding: 10px 20px;">Add to Bag</button>
+            <button style="background-color: black; color: white; padding: 10px 20px;">Add to Bag</button>
+        </div>
     </div>
-</div>
-<div id="n3"></div>
+
+    <div id="n3">
+
+    </div>
 </body>
 <script>
-let currentDiv = 1;
-function showDiv() {
-  for (let i = 1; i <= 3; i++) {
-    const div = document.getElementById(`cD${i}`);
-    if (i === currentDiv) {
-      div.style.display = "block";
-    } else {
-      div.style.display = "none";
-    }
-  }
-  currentDiv = currentDiv % 3 + 1;
-}
-setInterval(showDiv, 3000);
+    let currentDiv = 1;
 
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-  ctx.beginPath();
-  ctx.moveTo(127, 110);
-  ctx.bezierCurveTo(119, 148, 160, 92, 156, 93);
-  ctx.bezierCurveTo(153, 94, 132, 125, 127, 109);
-  ctx.stroke();
+    function showDiv() {
+        for (let i = 1; i <= 3; i++) {
+            const div = document.getElementById(`cD${i}`);
+            if (i === currentDiv) {
+                div.style.display = "block";
+            } else {
+                div.style.display = "none";
+            }
+        }
+        currentDiv = currentDiv % 3 + 1;
+    }
+    setInterval(showDiv, 3000);
+
+    let element = document.getElementById("textChange");
+    let texts = ["Bezier", "Svg", "Img"];
+    let currentIndex = 0;
+
+    function changeText() {
+        element.innerHTML = texts[currentIndex];
+        currentIndex = (currentIndex + 1) % texts.length;
+    }
+    setInterval(changeText, 3000);
+
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.beginPath();
+    ctx.moveTo(127, 110);
+    ctx.bezierCurveTo(119, 148, 160, 92, 156, 93);
+    ctx.bezierCurveTo(153, 94, 132, 125, 127, 109);
+    ctx.strokeStyle = "rgba(217,164,0,252) ";
+    ctx.stroke();
+    ctx.fillStyle = "rgba(217,164,0,252)";
+    ctx.fill();
 </script>
+
 </html>
