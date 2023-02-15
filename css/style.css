@@ -108,15 +108,55 @@
     
     #svg {
         position: absolute;
-        top: 753px;
-        left: 915px;
-        rotate: -28deg;
-        height: 60%;
+        top: 714px;
+        left: 766px;
+        rotate: -30deg;
+        height: 300px;
         width: auto;
         opacity: 0.9;
     }
-    
+    #btn{
+        background-color: black; 
+        color: white; 
+        padding: 10px 20px;
+    }
     #n3 {
         height: 600px;
         background-color: black;
+        display: flex;
+        align-items: center;
+        
+    }
+    #form{
+        color: black;
+        width: 600px;
+        display: inline-block;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+    }
+    #form p{
+        color: white;
+        font-weight: bold;
+        font-size: 24px;
+    }
+    #name{
+        width: 400px;
+    }
+    #email{
+        width: 400px;
+    }
+    #message{
+        width: 400px;
+        max-width: 400px;
+    }
+    #submit-btn{
+        width: 200px;
+        padding:0 auto;
+    }
+    #my-navbar.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
     }
