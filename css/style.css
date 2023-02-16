@@ -108,12 +108,11 @@
     
     #svg {
         position: absolute;
-        top: 714px;
-        left: 766px;
+        top: 715px;
+        left: 790px;
         rotate: -30deg;
         height: 300px;
         width: auto;
-        opacity: 0.9;
     }
     #btn{
         background-color: black; 
