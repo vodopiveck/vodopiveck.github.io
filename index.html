@@ -11,23 +11,22 @@
 </head>
 <body>
     <header>
-        <a href="#" class="logo">Nike</a>
+        <a href="https://www.nike.com/" class="logo">Nike</a>
         <nav class="navbar">
-            <a href="https://www.nike.com/">official site</a>
             <a href="#" id="btn1">about</a>
         </nav>
     </header>
-    <section class="container">
-        <div class="content">
+    <section class="container" id="parent">
+        <div class="content" class="child">
             <h3 id="textChange1">Nike Revolution 6</h3>
             <p id="textChange2">Comfort is the key to your running routine. Made from at least 20% recycled content by weight, this version features touchpoints at the heel and tongue for easy on and off. It has a softer ride than its predecessor with a foam that helps create a natural piston effect for even better flexibility. It has a simple, yet classic look with bold branding—making it ideal for running or casual wear.</p>
             <a href="#" class="btn" id="btn2">add to cart</a>
         </div>
-        <div class="images">
+        <div class="images" class="child">
             <img src="images/nikerev6.png" class="shoes active" alt="">
             <div id="svg" >
-                <svg height=78px width=auto viewBox="0 0 838 298">
-                    <path fill="white" stroke="black" stroke-width="1.5" d="M 118.50,3.88
+                <svg height=85px width=auto viewBox="0 0 838 298">
+                    <path fill="white" stroke="black" stroke-width=".7" d="M 118.50,3.88
                     C 60.70,66.07 52.12,81.38 41.62,97.00
                     28.33,110.60 9.89,156.67 11.00,156.25M 11.00,156.26
                     C 2.27,170.30 -8.27,231.82 14.00,259.33
@@ -42,7 +41,7 @@
             </div>
             <img src="images/w71.png" style="transform: scaleY(-1); rotate: -210deg;" class="shoes" alt="">
             <canvas id="myCanvas"></canvas>
-            <img src="images/nikeafs.png" style="rotate: 70deg; width: 60%;" class="shoes" alt="">
+            <img src="images/adapt.png" style="rotate: 15deg;" height="300px" width="auto" class="shoes" alt="">
         </div>
         <div class="left" onclick="prev()"><</div>
         <div class="right" onclick="next()">></div>
