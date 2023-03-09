@@ -1,161 +1,129 @@
-    body {
-        margin: 0 auto;
-    }
-    
-    .navbar {
-        height: 50px;
-        background-color: black;
-    }
-    
-    .navbar img {
-        height: 40px;
-        float: left;
-    }
-    
-    .navbar nav {
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .navbar nav ul {
-        display: flex;
-        list-style: none;
+*{
         margin: 0;
         padding: 0;
-    }
-    
-    .navbar nav ul li {
-        padding-left: 20px;
-    }
-    
-    .navbar nav ul li a {
-        color: white;
+        font-family: sans-serif;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
         text-decoration: none;
-        font-weight: bold;
+        text-transform: capitalize;
     }
-    
-    #n1 {
-        height: 500px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: black;
-        color: white;
-    }
-    
-    #productDescription {
-        width: 500px;
-        height: auto;
-        text-align: left;
-        display: inline-block;
-        margin: 0 auto;
-    }
-    
-    #productDescription h1 {
-        font-size: 35px;
-        font-weight: bold;
-        color: white;
-        text-align: center;
-    }
-    
-    #productDescription p {
-        font-size: 20px;
-    }
-    
-    #n2 {
-        height: 500px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .changingDiv img {
-        width: 400px;
-        height: 400px;
-        margin-right: 50px;
-        border-bottom: 1px solid black;
-    }
-    
-    #productBuy {
-        height: 400px;
-        padding-top: 200px;
-    }
-    
-    #cD1 {
-        display: block;
-        position: relative;
-        z-index: 1;
-    }
-    
-    #cD2 {
-        display: none;
-    }
-    
-    #cD3 {
-        display: none;
-    }
-    
-    #myCanvas {
-        height: 350px;
-        width: auto;
-        position: absolute;
-        z-index: 2;
-        top: -18px;
-        left: -10px;
-    }
-    
-    #svg {
-        position: absolute;
-        top: 715px;
-        left: 790px;
-        rotate: -30deg;
-        height: 300px;
-        width: auto;
-    }
-    #btn{
-        background-color: black; 
-        color: white; 
-        padding: 10px 20px;
-    }
-    #n3 {
-        height: 600px;
-        background-color: black;
-        display: flex;
-        align-items: center;
-        
-    }
-    #form{
-        color: black;
-        width: 600px;
-        display: inline-block;
-        margin: 0 auto;
-        align-items: center;
-        justify-content: center;
-    }
-    #form p{
-        color: white;
-        font-weight: bold;
-        font-size: 24px;
-    }
-    #name{
-        width: 400px;
-    }
-    #email{
-        width: 400px;
-    }
-    #message{
-        width: 400px;
-        max-width: 400px;
-    }
-    #submit-btn{
-        width: 200px;
-        padding:0 auto;
-    }
-    #my-navbar.fixed {
+    header{
         position: fixed;
         top: 0;
         left: 0;
+        right: 0;
+        z-index: 1000;
+        padding: 20px 9%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    header .logo{
+        font-size: 25px;
+        color:#333 ;
+    }
+    header .navbar{
+        font-size: 20px;
+        color: #333;
+        margin-left: 20px;
+    }
+    header .navbar a:hover{
+        color: #999;
+    }
+    .container{
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 20px 9%;
+        position: relative;
+        overflow: hidden;
+    }
+    .container .content{
+        flex: 1 1 400px;
+    }
+    .container .images{
+        flex: 1 1 500px;
+        position: relative;
+    }
+    .container .images .shoes{
         width: 100%;
+        transform: rotate(-35deg);
+        display: none;
+    }
+    .container .images .shoes.active{
+        display: initial;
+        animation: animate .5s cubic-bezier(.45, 1.63, .98, 1.55);
+    }
+    @keyframes animate {
+        0%{
+            transform: rotate(0deg) scale(.7);
+        }
+    }
+    .container .content h3{
+        color: #333;
+        font-size: 50px;
+    }
+    .container .content p{
+        color: #666;
+        font-size: 17px;
+        padding: 5px 0;
+    }
+    .container .content .btn{
+        display: inline-block;
+        margin-top: 10px;
+        font-style: 17px;
+        padding: 9px 40px;
+        background-color: #333;
+        color: #fff;
+        transition: .5s;
+    }
+    .container .content .btn:hover{
+        background:#666;
+    }
+    .container .left, 
+    .container .right{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 40px;
+        width: 40px;
+        border: 2px solid #333;
+        color: #333;
+        line-height: 40px;
+        font-size: 25px;
+        text-align: center;
+        font-weight: bolder;
+        cursor: pointer;
+        z-index: 1000;
+    }
+    .container .left{
+        left: 30px;
+    }
+    .container .right{
+        right: 30px;
+    }
+    .container .left:hover, 
+    .container .right:hover{
+        background:#333;
+        color: #fff;
+    }
+    #svg {
+        position: absolute;
+        rotate: -27.5deg;
+        left:42.8%;
+        top:34.5%;
+        opacity: 0.6;
+    }
+    #myCanvas {
+        height: 150px;
+        position: absolute;
+        z-index: 1;
+        transform: scaleX(-1);
+        left: 33.8%;
+        top: 12%;
+        rotate: -30.5deg;
+        opacity: .8;
+        visibility: hidden;
     }
