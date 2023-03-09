@@ -1,180 +1,53 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Nike Shop</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nike</title>
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="script.js"></script>
 </head>
-
 <body>
-    <div class="navbar" id="my-navbar">
-        <img src="images/nikeLogo.png">
-        <nav>
-            <ul>
-                <li><a href="#n1">Witness VII</a></li>
-                <li><a href="#n2">Shoes</a></li>
-                <li><a href="https://www.nike.com/t/lebron-witness-7-basketball-shoes-43zKtc" target="_blank">BUY</a></li>
-                <li><a href="#n3">CONTACT US</a></li>
-            </ul>
+    <header>
+        <a href="#" class="logo">Nike</a>
+        <nav class="navbar">
+            <a href="https://www.nike.com/">official site</a>
+            <a href="#" id="btn1">about</a>
         </nav>
-    </div>
-
-    <div id="n1">
-        <div id="productDescription">
-            <h1>Witness VII</h1>
-            <p>The longer LeBron’s legendary career continues, the more his game needs a design that doesn’t weigh him down, yet can still control all that sublime power. So, we’ve created our lightest LeBron model but with the kind of bankable support that
-                can help you stay in front of your opponent with the game on the line. Full-length Max Air cushioning helps you take off and land confidently, while lightweight mesh blends with containment cables to help keep you locked in for 4 quarters
-                or more.</p>
+    </header>
+    <section class="container">
+        <div class="content">
+            <h3 id="textChange1">Nike Revolution 6</h3>
+            <p id="textChange2">Comfort is the key to your running routine. Made from at least 20% recycled content by weight, this version features touchpoints at the heel and tongue for easy on and off. It has a softer ride than its predecessor with a foam that helps create a natural piston effect for even better flexibility. It has a simple, yet classic look with bold branding—making it ideal for running or casual wear.</p>
+            <a href="#" class="btn" id="btn2">add to cart</a>
         </div>
-    </div>
-
-    <div id="n2">
-        <div>
-            <div class="changingDiv" id="cD1">
-                <img src="images/w71.png">
-                <canvas id="myCanvas"></canvas>
+        <div class="images">
+            <img src="images/nikerev6.png" class="shoes active" alt="">
+            <div id="svg" >
+                <svg height=78px width=auto viewBox="0 0 838 298">
+                    <path fill="white" stroke="black" stroke-width="1.5" d="M 118.50,3.88
+                    C 60.70,66.07 52.12,81.38 41.62,97.00
+                    28.33,110.60 9.89,156.67 11.00,156.25M 11.00,156.26
+                    C 2.27,170.30 -8.27,231.82 14.00,259.33
+                    37.79,291.31 70.25,294.83 76.00,295.62
+                    104.00,304.00 171.36,287.27 173.50,284.75
+                    185.45,287.91 830.79,6.50 831.96,6.91
+                    831.96,6.91 291.00,150.00 291.00,150.00
+                    279.00,152.67 176.50,192.50 121.88,162.50
+                    113.21,153.58 85.98,141.26 89.04,87.07
+                    89.04,81.07 107.69,10.58 118.52,3.91" />
+                    </svg>
             </div>
-            <div class="changingDiv" id="cD2">
-                <img src="images/w73.png">
-                <div id="svg">
-                    <svg height=40px width=auto viewBox="0 0 838 298">
-                        <path fill="black" stroke="black" stroke-width="1" d="M 118.50,3.88
-                        C 60.70,66.07 52.12,81.38 41.62,97.00
-                        28.33,110.60 9.89,156.67 11.00,156.25M 11.00,156.26
-                        C 2.27,170.30 -8.27,231.82 14.00,259.33
-                        37.79,291.31 70.25,294.83 76.00,295.62
-                        104.00,304.00 171.36,287.27 173.50,284.75
-                        185.45,287.91 830.79,6.50 831.96,6.91
-                        831.96,6.91 291.00,150.00 291.00,150.00
-                        279.00,152.67 176.50,192.50 121.88,162.50
-                        113.21,153.58 85.98,141.26 89.04,87.07
-                        89.04,81.07 107.69,10.58 118.52,3.91" />
-                        </svg>
-                </div>
-            </div>
-            <div class="changingDiv" id="cD3">
-                <img src="images/w76.png">
-            </div>
+            <img src="images/w71.png" style="transform: scaleY(-1); rotate: -210deg;" class="shoes" alt="">
+            <canvas id="myCanvas"></canvas>
+            <img src="images/nikeafs.png" style="rotate: 70deg; width: 60%;" class="shoes" alt="">
         </div>
-        <div id="productBuy">
-            <p>LeBron Witness WII</p>
-            <p>Basketball Shoes</p>
-            <p id="textChange">Bezier</p>
-            <p>$105</p>
-            <select name="shoe-size">
-            <option value="6">6</option>
-            <option value="6.5">6.5</option>
-            <option value="7">7</option>
-            <option value="7.5">7.5</option>
-            <option value="8">8</option>
-            <option value="8.5">8.5</option>
-            <option value="9">9</option>
-            <option value="9.5">9.5</option>
-            <option value="10">10</option>
-            <option value="10.5">10.5</option>
-            <option value="11">11</option>
-            <option value="11.5">11.5</option>
-            <option value="12">12</option>
-            <option value="12.5">12.5</option>
-            <option value="13">13</option>
-            <option value="13.5">13.5</option>
-            <option value="14">14</option>
-            <option value="14.5">14.5</option>
-            <option value="15">15</option>
-          </select>
-            <button id="btn">Add to Bag</button>
-        </div>
-    </div>
-
-    <div id="n3">
-        <div id="form">
-            <form id="myForm">
-                <p>CONTACT US</p>
-                <label for="name"></label>
-                <input type="text" id="name" name="name" placeholder="Name" required><br><br>
-                
-                <label for="email"></label>
-                <input type="email" id="email" name="email" placeholder="Email" required><br><br>
-            
-                <label for="question"></label>
-                <textarea id="message" name="message" placeholder="Message" required></textarea><br><br>
-            
-                <button type="submit" id="submit-btn">Submit</button>
-              </form>
-        </div>
-        
-    </div>
+        <div class="left" onclick="prev()"><</div>
+        <div class="right" onclick="next()">></div>
+    </section>
 </body>
-<script>
-    let currentDiv = 1;
-
-    function showDiv() {
-        for (let i = 1; i <= 3; i++) {
-            const div = document.getElementById(`cD${i}`);
-            if (i === currentDiv) {
-                div.style.display = "block";
-            } else {
-                div.style.display = "none";
-            }
-        }
-        currentDiv = currentDiv % 3 + 1;
-    }
-    setInterval(showDiv, 3000);
-
-    let element = document.getElementById("textChange");
-    let texts = ["Bezier", "Svg", "Img"];
-    let currentIndex = 0;
-
-    function changeText() {
-        element.innerHTML = texts[currentIndex];
-        currentIndex = (currentIndex + 1) % texts.length;
-    }
-    setInterval(changeText, 3000);
-
-    var c = document.getElementById("myCanvas");
-    var ctx = c.getContext("2d");
-    ctx.beginPath();
-    ctx.moveTo(127, 110);
-    ctx.bezierCurveTo(119, 148, 160, 92, 156, 93);
-    ctx.bezierCurveTo(153, 94, 132, 125, 127, 109);
-    ctx.strokeStyle = "rgba(217,164,0,252) ";
-    ctx.stroke();
-    ctx.fillStyle = "rgba(217,164,0,252)";
-    ctx.fill();
-
-    document.getElementById("submit-btn").addEventListener("click", function(event) {
-      event.preventDefault();
-      if (validateForm()) {
-        swal("Success!", "Your question has been submitted.", "success");
-    
-        document.getElementById("myForm").reset();
-      }
-    });
-    function validateForm() {
-      var name = document.getElementById("name").value;
-      var email = document.getElementById("email").value;
-      var question = document.getElementById("message").value;
-
-      if (name === "" || email === "" || message === "") {
-        swal("Error!", "Please fill in all the required fields.", "error");
-        return false;
-      }
-      return true;
-    }
-    window.addEventListener('scroll', function() {
-    const navbar = document.getElementById('my-navbar');
-    if (window.pageYOffset >= navbar.offsetTop) {
-      navbar.classList.add('fixed');
-    } else {
-      navbar.classList.remove('fixed');
-    }
-  });
-    document.getElementById("btn").addEventListener("click", function(event) {
-        swal("Error!", "this item is currently not available.", "error");
-    });
-</script>
 
 </html>
